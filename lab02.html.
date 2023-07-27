@@ -12,13 +12,14 @@
   <p> I am from <em>Passaic, New Jersey</em>. The city is predominantly Hispanic. </p>
   <p> My parents have motivated my interests to <strong>highlight</strong> underrepresented communities and their histories. </p>
 
-<h3> List of Clubs I am Involved in </h3>
+  <h3> List of Clubs I am Involved in </h3>
 
-<u1>
-  <li> FUERZA Farmworker's Fund  </li>  
-  <li> First-Year Summer Enrichment Program (FYSEP) </li>  
-  <li> CAUSA </li>  
-</u1>
+    <u1>
+      <li> FUERZA Farmworker's Fund </li>  
+      <li> First-Year Summer Enrichment Program (FYSEP) </li>  
+      <li> CAUSA </li>  
+
+    </u1>
 
 </body>
 </html>
