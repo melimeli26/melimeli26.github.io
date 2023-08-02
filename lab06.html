@@ -43,10 +43,27 @@
    <div>
      <img src="Passaic.jpg" style= "width: 30%; height: 200 px">
    </div>
-  
-  <p> 
+
+  <button id="fam">
+    Click here to find out my motivations
+  </button>button>
+  <p hidden id="fam"> 
   My parents have motivated my interests to <strong>highlight</strong> underrepresented communities and their histories. 
   </p>
+
+<script>
+  //$("#fam"  <-- this will reference all "#fam" id's
+
+  // use jQuery to listen for a button click
+  // toggle the hidden job message
+
+  $("button#fam").hover(
+      function() {
+          $("p#idfam").toggle();
+        }
+    );
+  
+</script>
   
 <table>
   <tr>
