@@ -15,7 +15,29 @@
     </a>
   </div>
   <h3> What I do </h3>
-  <p> I am a junior at Dartmouth College majoring in Latin American, Latino, and Carribbean Studies with a minor in Geography. I am also an intern for the Gilder Lehrman Institute of American History.</p>
+
+  <button id="job">
+    Click her to find out!
+  <p hidden id= "job"> 
+    I am a junior at Dartmouth College majoring in Latin American, Latino, and Carribbean Studies with a minor in Geography. I am also an intern for the Gilder Lehrman Institute of American History.
+  </p>
+
+<script>
+  //$("p")  <-- this will refernece all of the <p> tags
+  //$("#job")  <--- this will refernece all "#job" ids
+
+  // use jQuery to listen for a button click
+  // toggle the hidden job message
+  
+  $("button#job"). click (
+        function()  {
+            $("p#job"). toggle();
+        }
+      );
+
+</script>
+
+  
   <h3 style= "font-family:Arial, Helvetica,sans-serif; background-color:#FFB6C1"> Where I am from </h3>
   <p> I am from <em>Passaic, New Jersey</em>. The city is predominantly Hispanic. </p>
    <div>
