@@ -30,12 +30,15 @@
   // use jQuery to listen for a button click
   // toggle the hidden job message
   
-  $("button#job"). click (
+  $("button#job"). hover (
         function()  {
             $("p#job"). toggle();
         }
       );
-          
+  $("h1"). hover(
+          function() {
+            console.log ("h1 hover;");
+          });
 </script>
 
   
