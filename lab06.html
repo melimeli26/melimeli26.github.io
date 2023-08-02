@@ -24,8 +24,8 @@
   </p>
 
 <script>
-  //$("p")  <-- this will refernece all of the <p> tags
-  //$("#job")  <--- this will refernece all "#job" ids
+  //$("p")  <-- this will reference all of the <p> tags
+  //$("#job")  <--- this will reference all "#job" ids
 
   // use jQuery to listen for a button click
   // toggle the hidden job message
@@ -35,13 +35,6 @@
             $("p#job"). toggle();
         }
       );
- 
-  $("button#interest").click(
-          function() {
-              $("p#interest").fadeToggle();
-          }
-        );
-  
 </script>
 
   
@@ -54,11 +47,25 @@
   <button id="interest">
     Hover over to find out who motivated my major!
   </button>
-  
   <p hidden id= "interest"> 
   My parents have motivated my interests to <strong>highlight</strong> underrepresented communities and their histories. 
   </p>
 
+<script>
+  //$("p")  <-- this will reference all of the <p> tags
+  //$("#job")  <--- this will reference all "#job" ids
+
+  // use jQuery to listen for a button click
+  // toggle the hidden job message
+  
+  $("button#interest").hover(
+          function() {
+              $("p#interest").Toggle();
+          }
+        );
+  
+</script>
+  
   
 <table>
   <tr>
