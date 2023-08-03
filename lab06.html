@@ -32,7 +32,7 @@
   
   $("button#job"). hover (
         function()  {
-            $("p#job"). toggle();
+            $("p#job"). toggle("slow");
         }
       );
   $("img#MR"). hover(
@@ -73,12 +73,30 @@
 
   <h3> List of Clubs I am Involved in </h3>
 
-    <u1>
+      <button id="club">
+      Click here to find out!
+      </button>
+  
+    <u1 hidden id="club">
       <li> FUERZA Farmworker's Fund </li>  
       <li> First-Year Summer Enrichment Program (FYSEP) </li>  
       <li> CAUSA </li>  
 
     </u1>
+
+<script>
+  //$("u1")  <-- this will reference all of the <u1> tags
+  //$("#club")  <--- this will reference all "#club" ids
+
+  // use jQuery to listen for a button click
+  // toggle the hidden  message
+  
+  $("button#club"), click(
+        function (){
+              $("u1#club").show();
+        }
+      );
+</script>
 
 <a href="lab02.html">This is a link to my previous lab file. </a>
 
