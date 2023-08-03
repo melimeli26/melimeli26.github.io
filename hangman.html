@@ -9,7 +9,8 @@
       $(document).ready(
 
         function()  {
-     
+
+          
         var total_guesses= 15;
         var word = "p r o d u c t i v e l y";
         var blanks = "_ _ _ _ _ _ _ _ _ _ _ _ "
@@ -20,7 +21,7 @@
         $(".letter").click(
             function() {
                   var id = $(this).attr('id');
-                  console.log("clicked on " + id);
+                  console.log("Clicked on " + id);
 
                   if (guesses.includes(id)) {
                       $("#error_msg").html("You already guessed " + id);
@@ -30,26 +31,25 @@
                     
                     total_guesses = total_guesses - 1;
                     if (total_guesses<0) {
-                      $("error_msg").html("You are out of guesses. You lose.")
-
+                      $("#error_msg").html("You are out of guesses. You lose.")
                     } else {
                       $("#numleft").html(total_guesses);
 
                       if (word.includes(id)) {
-                          var index= word.indexOf(id);
+                          var index = word.indexOf(id);
                           console.log("letter" + id + " is at index" + index);
-                        blanks = blanks.substr(0,index) + id + 
-                                 blanks.substr(index + 1);
-                        $("#word").html(blanks);
+                          blanks = blanks.substr(0,index) + id + 
+                                  blanks.substr(index + 1);
+                          $("#word").html(blanks);
                       }
 
                       if (blanks == word) {
-                          $("#error_msg"). text ("Congrats!You won!");
+                          $("#error_msg"). text ("Congrats! You won!");
                       }
+                    
                     }  
                   }
-        }
-        
+        }   
         
         )
 
@@ -72,11 +72,10 @@
 
   <div id="wordspace">
       <p>
-        The word to guess is <span id= "word"style= "font-weight: bold;"
-        </span>
+        The word to guess is <span id= "word" style= "font-weight: bold;"</span>
       </p>
   </div>
-
+ 
   <div id= "entry">
     <p> Click on a letter to make a guess. </p>
     <p>
@@ -107,12 +106,12 @@
           <span class= "letter" id="y">y</span>
           <span class= "letter" id="z">z</span>
 
-      
     </p>
   </div>
     
   <div id="error_msg" style="color:red;"></div>
+
+  
 </body>
 
 </html>
-
