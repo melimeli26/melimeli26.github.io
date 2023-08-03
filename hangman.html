@@ -36,7 +36,7 @@
                       $("#numleft").html(total_guesses);
 
                       if (word.includes(id)) {
-                          var index= word.indexof(id);
+                          var index= word.indexOf(id);
                           console.log("letter" + id + " is at index" + index);
                         blanks = blanks.substr(0,index) + id + 
                                  blanks.substr(index + 1);
@@ -107,8 +107,11 @@
           <span class= "letter" id="y">y</span>
           <span class= "letter" id="z">z</span>
 
+      
     </p>
-  <div id="error_msg" style-"color: red;"></div>
+  </div>
+    
+  <div id="error_msg" style="color:red;"></div>
 </body>
 
 </html>
