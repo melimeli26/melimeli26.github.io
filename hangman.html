@@ -13,7 +13,7 @@
           
         var total_guesses= 15;
         var word = "p r o d u c t i v e l y";
-        var blanks = "_ _ _ _ _ _ _ _ _ _ _ _ "
+        var blanks = "_ _ _ _ _ _ _ _ _ _ _ _"
         var guesses = "";
 
           $("#word").html(blanks);
@@ -44,7 +44,7 @@
                       }
 
                       if (blanks == word) {
-                          $("#error_msg").html("CONGRATS!You won!");
+                          $("#error_msg").text("CONGRATS!You won!");
                       }
                     
                     }  
