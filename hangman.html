@@ -14,6 +14,8 @@
         var word = "p r o d u c t i v e l y";
         var blanks = "_ _ _ _ _ _ _ _ _ _ _ _ "
         var guesses = "";
+
+          $("#word").html(blanks);
           
         $(".letter").click(
             function() {
@@ -27,12 +29,23 @@
                       $("#" + id).css('text-decoration', 'line-through');
                     
                     total_guesses = total_guesses - 1;
-                    if (total_guesses=0) {
-                      $("error_msg").html("You are out of gueeses. You lose \u2639")
+                    if (total_guesses<=0) {
+                      $("error_msg").html("You are out of guesses. You lose.")
 
                     } else {
                       $("#numleft").html(total_guesses);
-            
+
+                      if (word.includes(id)) {
+                          var index= word.indexof(id);
+                          console.log("letter" + id + " is at index" + index);
+                        blanks = blanks.substr(0,index) + id + 
+                                 blanks.substr(index + 1);
+                        $("#word").html(blanks);
+                      }
+
+                      if (blanks == word) {
+                          $("#error_msg"). text ("Congrats!You won!");
+                      }
                     }  
                   }
         }
