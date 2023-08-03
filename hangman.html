@@ -7,12 +7,34 @@
 
 
       $(document).ready(
+
         function()  {
+     
+        var total_guesses= 15;
+        var word = "p r o d u c t i v e l y";
+        var blanks = "_ _ _ _ _ _ _ _ _ _ _ _ "
+        var guesses - "";
+          
         $(".letter").click(
             function() {
                   var id = $(this).attr('id');
                   console.log("clicked on " + id);
-              
+
+                  if (guesses.includes(id)) {
+                      $("#error_msg").html("You already guessed " + id);
+                  }  else {
+                      guesses = guesses + id;
+                      $("#" + id).css('text-decoration'm 'line-through');
+                    
+                    total_guesses = total_guesses - 1;
+                    if (total_guesses=0) {
+                      $("error_msg").html("You are out of gueeses. You lose \u2639")
+
+                    } else {
+                      $("#numleft").html(total_guesses);
+            
+                    }  
+                  }
         }
         
         
@@ -31,7 +53,7 @@
 
   <div id="chances">
     <p>
-        You have <span id="numleft">10</span> chances left.
+        You have <span id="numleft">15</span> chances left.
     </p>
   </div>
 
