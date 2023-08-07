@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+      <title>Welcome to Passaic, New Jersey!
+      </title>
+      <link rel="stylesheet"href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+                            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+                            crossorigin=""/>
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+              integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
+              crossorigin="">
+        
+              </script>
+     
+    <style>
+          body {
+            background-color: #CBC3E3;
+          }
+
+          h1 {
+            text-align: center;
+            background-color: #F8C8DC;
+            color: #CBC3E3;
+            padding: 10px;
+            margin: 0;
+          }
+      
+          #map {
+              height: 400px;
+              width: 700px;
+              margin-left: auto;
+              margin-right: auto;
+              display: block;
+              border-radius: 20px;
+            
+          }
+        
+      </style>
+      
+  </head>
+  
+  <body>
+      <h1>Welcome to Passaic, New Jersey!
+      </h1>
+      <div id="map">
+      </div>
+
+      <script>
+          
+        
+          var OpenStreetMap_HOT = L.titleLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png'),
+                      { maxZoom: 20, 
+                       attribution: '&copy; <a href="www.openstreetmap.com/copyright">OpenStreetMap </a>'
+                        Titles courtesy of <a href="http://www.hot.osm.org">HOT OSM</a>'
+        
+        })
+        
+          function initialize() {
+                var map = L.map('map,' {
+                  center: [ 40.8568, 74.1285 ],
+                  zoom: 15,
+                  layers: [OpenStreetMap_HOT]
+                })
+
+      </script>
+  </body>
+</html>
