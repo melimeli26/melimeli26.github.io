@@ -44,9 +44,6 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
    
-   
-    <script src="njinstitution.geojson"> </script>
-        
     <script>
         
        var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',{ maxZoom: 19,
@@ -59,21 +56,12 @@
                   center: [ 40.8568, -74.1285 ],
                   zoom: 15,
                   layers: [OpenStreetMap_HOT]
-                  }).addTo(map);
-          });
+                });
 
-        L.geoJSON(njinstitution.geojson,
-                  { color: "pink,"
-            onEachFeature: function (feature, layer) {
-            layer.bindPopup("<b>Location Name " + feature.LocationName + "</b><br>");
           }
-                  }).addTo(map);
-          });
-
-         }
-
-          initialize();
       
+          initialize();
+
       </script>
   </body>
 </html>
