@@ -62,9 +62,18 @@
                 });
 
           }
+
+        L.geoJSON(njinstitution.geojson,
+                  { color: "pink,"
+            onEachFeature: function (feature, layer) {
+            layer.bindPopup("<b>Location Name " + feature.LocationName + "</b><br>");
+          }
+                  }).addTo(map);
+
+
       
           initialize();
-
+      
       </script>
   </body>
 </html>
