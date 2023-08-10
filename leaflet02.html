@@ -60,7 +60,7 @@
                   layers: [OpenStreetMap_HOT]
                 });
 
-                L.geoJson(Known_Contaminated_Site_List_for_New_Jersey.geojson, {
+                L.geoJson(contaminated_geojson, {
                         color: "grey",
                         weight: 5,
                         opacity: .5,
@@ -70,7 +70,7 @@
                     }).addTo(map);
               
 
-                L.geoJson(Solid_Waste_Landfill_Site_Extents_in_New_Jersey.geojson, {
+                L.geoJson(waste_geojson, {
                         color: "black",
                         weight: 5,
                         opacity: .5,
