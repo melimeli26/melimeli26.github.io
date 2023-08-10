@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+      <title>Waste Contamination in Passaic County, New Jersey </title>
+      <link rel="stylesheet"href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+                            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+                            crossorigin=""/>
+     
+    <style>
+          body {
+            background-color: #013220;
+          }
+
+          h1 {
+            text-align: center;
+            background-color: #63666A;
+            color: "white";
+            padding: 10px;
+            margin: 0;
+          }
+      
+          #map {
+              height: 400px;
+              width: 700px;
+              margin: 20 px;
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              border-radius: 20px;
+            
+          }
+        
+      </style>
+      
+  </head>
+  
+  <body>
+      <h1> Waste Contamination in Passaic County, New Jersey
+      </h1>
+      <div id="map">
+      </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+<script src="Known_Contaminated_Site_List_for_New_Jersey.geojson"></script>
+<script src="Solid_Waste_Landfill_Site_Extents_in_New_Jersey.geojson"></script>
+        
+<script>    
+  var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',{ maxZoom: 25,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>,' + 'Tiles courtesy of <a href="http://www.hot.osm.org">HOT OSM</a>'
+                          
+        });
+        
+          function initialize() {
+                var map = L.map('map', {
+                  center: [ 41.1232, -74.3587],
+                  zoom: 15,
+                  layers: [OpenStreetMap_HOT]
+                });
+
+                L.geoJson(contaminated_geojson, {
+                        color: "grey",
+                        weight: 5,
+                        opacity: .5,
+                        onEachFeature: function (feature, layer) { 
+                        layer.bindPopup("<b>Contaminated Groundwater Site Name:" + feature.properties.PI_NAME + "</b>");   
+                    }
+                    }).addTo(map);
+              
+
+                L.geoJson(waste_geojson, {
+                        color: "black",
+                        weight: 5,
+                        opacity: .5,
+                        onEachFeature: function (feature, layer) { 
+                        layer.bindPopup("<b>Facility Name" + feature.properties.FACILITY_NAME + "</b>");   
+                    }
+                    }).addTo(map);
+                  }
+    
+          initialize();
+
+      </script>
+  </body>
+</html>
