@@ -64,12 +64,20 @@
                 L.geoJson(Known_Contaminated_Site_List_for_New_Jersey.geojson,
                         {color: "grey",
                         onEachFeature: function (feature, layer) { 
-                        layer.bindPopup("<b>Contaminated Site Name:" + feature.properties.PI_NAME + "</b>");   
+                        layer.bindPopup("<b>Contaminated Groundwater Site Name:" + feature.properties.PI_NAME + "</b>");   
                     }
                     }).addTo(map);
                   }
 
-      
+
+                L.geoJson(Solid_Waste_Landfill_Site_Extents_in_New_Jersey.geojson,
+                        {color: "black",
+                        onEachFeature: function (feature, layer) { 
+                        layer.bindPopup("<b>FACILITY_NAME" + feature.properties.PI_NAME + "</b>");   
+                    }
+                    }).addTo(map);
+                  }
+    
           initialize();
 
       </script>
