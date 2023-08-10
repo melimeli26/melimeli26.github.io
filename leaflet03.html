@@ -30,7 +30,8 @@
               border-radius: 20px;
             
           }
-        
+        #buttons { padding: 10 px; background: light yellow;}
+      
       </style>
       
   </head>
@@ -38,8 +39,7 @@
   <body>
       <h1> Waste Contamination in Passaic County, New Jersey
       </h1>
-      <div id="map">
-      </div>
+      <div id="map"> </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
@@ -65,7 +65,7 @@
                         weight: 5,
                         opacity: .5,
                         onEachFeature: function (feature, layer) { 
-                        layer.bindPopup("<b>Contaminated Groundwater Site Name:" + feature.properties.PI_NAME + "</b>");   
+                        layer.bindPopup("<b>Contaminated Groundwater Site Name: " + feature.properties.PI_NAME + "</b>");   
                     }
                     }).addTo(map);
               
@@ -75,13 +75,24 @@
                         weight: 5,
                         opacity: .5,
                         onEachFeature: function (feature, layer) { 
-                        layer.bindPopup("<b>Facility Name" + feature.properties.FACILITY_NAME + "</b>");   
+                        layer.bindPopup("<b>Facility Name: " + feature.properties.FACILITY_NAME + "</b>");   
                     }
                     }).addTo(map);
-                  }
+                
+              $("toggleCon").click ( function () {
+                  
+              })
+          }
     
           initialize();
 
       </script>
+
+    <div id= "buttons">
+        <button id= "toggleCon">Toggle the Contaminated Groundwater Site Name Layer. </button>
+        <button id= "toggleWas">Toggle the Waste Landfill Site Layer. </button>
+    
+    </div>
+    
   </body>
 </html>
