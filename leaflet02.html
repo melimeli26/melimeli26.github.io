@@ -63,6 +63,8 @@
 
                 L.geoJson(Known_Contaminated_Site_List_for_New_Jersey.geojson,
                         {color: "grey",
+                        weight: 5,
+                        opacity: .5
                         onEachFeature: function (feature, layer) { 
                         layer.bindPopup("<b>Contaminated Groundwater Site Name:" + feature.properties.PI_NAME + "</b>");   
                     }
@@ -72,6 +74,8 @@
 
                 L.geoJson(Solid_Waste_Landfill_Site_Extents_in_New_Jersey.geojson,
                         {color: "black",
+                        weight: 5,
+                        opacity: .5,
                         onEachFeature: function (feature, layer) { 
                         layer.bindPopup("<b>FACILITY_NAME" + feature.properties.PI_NAME + "</b>");   
                     }
