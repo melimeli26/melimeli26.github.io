@@ -48,6 +48,7 @@
 <script src="Solid_Waste_Landfill_Site_Extents_in_New_Jersey.geojson"></script>
         
 <script>    
+  var conVisible = false;
   var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',{ maxZoom: 25,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>,' + 'Tiles courtesy of <a href="http://www.hot.osm.org">HOT OSM</a>'
                           
@@ -67,7 +68,7 @@
                         onEachFeature: function (feature, layer) { 
                         layer.bindPopup("<b>Contaminated Groundwater Site Name: " + feature.properties.PI_NAME + "</b>");   
                     }
-                    }).addTo(map);
+                    });
               
 
                 L.geoJson(waste_geojson, {
@@ -80,7 +81,9 @@
                     }).addTo(map);
                 
               $("toggleCon").click ( function () {
-                  
+                  if (conVisible) {
+                      conVisible = false;
+                    
               })
           }
     
