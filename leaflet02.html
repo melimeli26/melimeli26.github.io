@@ -9,7 +9,7 @@
      
     <style>
           body {
-            background-color: #CBC3E3;
+            background-color: #cfcfc4;
           }
 
           h1 {
@@ -46,7 +46,7 @@
    
     <script>
 
-  <script src="Known_Contaminated_Site_List_for_New_Jersey.geojson></script>
+  <script src="Known_Contaminated_Site_List_for_New_Jersey.geojson"></script>
   <script src="Solid_Waste_Landfill_Site_Extents_in_New_Jersey.geojson"></script>
         
        var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',{ maxZoom: 25,
@@ -61,7 +61,14 @@
                   layers: [OpenStreetMap_HOT]
                 });
 
-          }
+                L.geoJson(Known_Contaminated_Site_List_for_New_Jersey.geojson,
+                        {color: "grey",
+                        onEachFeature: function (feature, layer) { 
+                        layer.bindPopup("<b>Contaminated Site Name:" + feature.properties.PI_NAME + "</b>");   
+                    }
+                    }).addTo(map);
+                  }
+
       
           initialize();
 
