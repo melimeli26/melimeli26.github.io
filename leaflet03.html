@@ -27,10 +27,9 @@
               display: block;
               margin-left: auto;
               margin-right: auto;
-              border-radius: 20px;
-            
+              border-radius: 20px;    
           }
-        #buttons { padding: 10 px; background: light yellow;}
+        #buttons{ padding: 10 px; background: light yellow;}
       
       </style>
       
@@ -48,12 +47,28 @@
 <script src="Solid_Waste_Landfill_Site_Extents_in_New_Jersey.geojson"></script>
         
 <script>    
+  var contaminationLayer;
   var conVisible = false;
+  
   var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',{ maxZoom: 25,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>,' + 'Tiles courtesy of <a href="http://www.hot.osm.org">HOT OSM</a>'
                           
         });
-        
+
+    function pointSymbology (feature) {
+        var category = feature.properities.CATEGORY;
+        var pointcolor = "#F5F5DC" ,
+
+          if ("CATEGORY" = 0) { lineColor = "#F5F5DC"}
+          if ("CATEGORY" = 1) { lineColor = "#A9A9A9"}
+          if ("CATEGORY" = 2) { lineColor = "#808080"}
+          if ("CATEGORY" > 2) { lineColor= = "#36454F"}
+
+          return {
+            color: pointColor,
+              opacity: 1
+          }
+    };
           function initialize() {
                 var map = L.map('map', {
                   center: [ 41.1232, -74.3587],
@@ -61,7 +76,7 @@
                   layers: [OpenStreetMap_HOT]
                 });
 
-                L.geoJson(contaminated_geojson, {
+               contaminationLayer = L.geoJson(contaminated_geojson, {
                         color: "grey",
                         weight: 5,
                         opacity: .5,
@@ -71,12 +86,14 @@
                     });
               
 
-                L.geoJson(waste_geojson, {
+               L.geoJson(waste_geojson, {
                         color: "black",
                         weight: 5,
                         opacity: .5,
                         onEachFeature: function (feature, layer) { 
-                        layer.bindPopup("<b>Facility Name: " + feature.properties.FACILITY_NAME + "</b>");   
+                        layer.bindPopup("<b>Facility Name: " + feature.properties.FACILITY_NAME + "</b><br>" +
+                                     "CATEGORY: "  + 
+                          feature.properities.CATEGORY);  
                     }
                     }).addTo(map);
                 
@@ -93,7 +110,6 @@
 
     <div id= "buttons">
         <button id= "toggleCon">Toggle the Contaminated Groundwater Site Name Layer. </button>
-        <button id= "toggleWas">Toggle the Waste Landfill Site Layer. </button>
     
     </div>
     
