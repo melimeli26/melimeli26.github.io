@@ -57,7 +57,7 @@
         });
   
     function pointSymbology (feature) {
-        var category = feature.properties.CATEGORY;
+        var category = = parseFloat(feature.properties.CATEGORY)
         var pointColor = "#AC9362";
 
           if (category = 0) { pointColor = "#F5F5DC";}
