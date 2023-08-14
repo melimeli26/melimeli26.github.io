@@ -99,9 +99,18 @@
                         layer.bindPopup("<b>Contaminated Groundwater Site Name: " + feature.properties.PI_NAME + "</b>" +
                                      "CATEGORY: "  + feature.properities.CATEGORY);   
                     }
-                    });addTo(map);
+                    });
               
-
+              $("toggleCon").click( function () {
+                  if (conVisible) {
+                      conVisible = false;
+                      contaminationLayer.removeFrom(map);
+                  } else {
+                      conVisibile = true;
+                       contaminationLayer.addTo(map);
+                  }
+              })
+            
                L.geoJson(waste_geojson, {
                         color: "black",
                         weight: 5,
@@ -111,11 +120,6 @@
                     }
                     }).addTo(map);
                 
-              $("toggleCon").click ( function () {
-                  if (conVisible) {
-                      conVisible = false;
-                    
-              })
           }
     
           initialize();
