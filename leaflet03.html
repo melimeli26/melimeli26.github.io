@@ -64,7 +64,7 @@
         });
   
     function pointSymbology (feature) {
-        var category = feature.properities.CATEGORY;
+        var category = feature.properties.CATEGORY;
         var pointColor = "#AC9362";
 
           if (category = 0) { pointColor = "#F5F5DC";}
@@ -97,7 +97,7 @@
                         opacity: .5,
                         onEachFeature: function (feature, layer) { 
                         layer.bindPopup("<b>Contaminated Groundwater Site Name: " + feature.properties.PI_NAME + "</b><br>" +
-                                     "CATEGORY: "  + feature.properities.CATEGORY + "</br>);   
+                                     "CATEGORY: "  + feature.properties.CATEGORY + "</br>);   
                     }
                     });
               
