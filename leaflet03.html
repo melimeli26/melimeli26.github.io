@@ -35,6 +35,12 @@
         }
       
       </style>
+
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+<script src="Known_Contaminated_Site_List_for_New_Jersey.geojson"></script>
+<script src="Solid_Waste_Landfill_Site_Extents_in_New_Jersey.geojson"></script>
       
   </head>
   
@@ -43,11 +49,6 @@
       </h1>
       <div id="map"> </div>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
-<script src="Known_Contaminated_Site_List_for_New_Jersey.geojson"></script>
-<script src="Solid_Waste_Landfill_Site_Extents_in_New_Jersey.geojson"></script>
         
 <script>    
   var contaminationLayer;
@@ -75,26 +76,25 @@
           return {
             color: pointColor,
               opacity: 1
-          };
-    }
+          }
+    };
           function initialize() {
                 var map = L.map('map', {
                   center: [ 41.1232, -74.3587],
                   zoom: 15,
                   layers: [OpenStreetMap_HOT]
-                })
+                });
 
         var baseMaps = {
         "OpenStreetMap": OpenStreetMap_HOT,
         "OpenTopoMap": OpenTopoMap
-    				  };
+    				  }
 
       L.control.layers(baseMaps).addTo(map);
 
                contaminationLayer = L.geoJson(contaminated_geojson, {
-                        color: "blue",
-                        weight: 5,
-                        opacity: .5,
+
+                       style: pointSymbology,
                         onEachFeature: function (feature, layer) { 
                         layer.bindPopup("<b>Contaminated Groundwater Site Name: " + feature.properties.PI_NAME + "</b><br>" +
                                      "CATEGORY: "  + feature.properties.CATEGORY);   
@@ -109,7 +109,7 @@
                       conVisible = true;
                        contaminationLayer.addTo(map);
                   }
-              })
+              });
             
                L.geoJson(waste_geojson, {
                         color: "black",
