@@ -29,9 +29,9 @@
               margin-right: auto;
               border-radius: 20px;    
           }
-        #buttons{ 
+        #buttons { 
           padding: 10 px; 
-          background:#ffffe0;
+          background: #ffffe0;
         }
       
       </style>
@@ -82,7 +82,7 @@
                   center: [ 41.1232, -74.3587],
                   zoom: 15,
                   layers: [OpenStreetMap_HOT]
-                });
+                })
 
         var baseMaps = {
         "OpenStreetMap": OpenStreetMap_HOT,
@@ -92,7 +92,7 @@
       L.control.layers(baseMaps).addTo(map);
 
                contaminationLayer = L.geoJson(contaminated_geojson, {
-                        color: "grey",
+                        color: "blue",
                         weight: 5,
                         opacity: .5,
                         onEachFeature: function (feature, layer) { 
