@@ -10,49 +10,8 @@
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-     
-    <style>
-          body {
-            background-color: #013220;
-          }
-
-          h1 {
-            text-align: center;
-            background-color: #63666A;
-            color: "white";
-            padding: 10px;
-            margin: 0;
-          }
-      
-          #map {
-              height: 400px;
-              width: 700px;
-              margin: 20 px;
-              display: block;
-              margin-left: auto;
-              margin-right: auto;
-              border-radius: 20px;    
-          }
-        #buttons { 
-          padding: 10 px; 
-          background: #ffffe0;
-        }
-      
-      </style>
-
-<script src="Known_Contaminated_Site_List_for_New_Jersey.geojson"></script>
-<script src="Solid_Waste_Landfill_Site_Extents_in_New_Jersey.geojson"></script>
-      
-  </head>
-  
-  <body>
-      <h1> Waste Contamination in Passaic County, New Jersey
-      </h1>
-      <div id="map"> </div>
-
-        
-<script>    
-  $(document).ready(function(){
+  <script>
+    $(document).ready(function(){
   
   var contaminationLayer;
   var conVisible = false;
@@ -125,8 +84,48 @@
                 
           }
         });
+  
       </script>
+    
+    <style>
+          body {
+            background-color: #013220;
+          }
 
+          h1 {
+            text-align: center;
+            background-color: #63666A;
+            color: "white";
+            padding: 10px;
+            margin: 0;
+          }
+      
+          #map {
+              height: 400px;
+              width: 700px;
+              margin: 20 px;
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              border-radius: 20px;    
+          }
+        #buttons { 
+          padding: 10 px; 
+          background: #ffffe0;
+        }
+      
+      </style>
+
+<script src="Known_Contaminated_Site_List_for_New_Jersey.geojson"></script>
+<script src="Solid_Waste_Landfill_Site_Extents_in_New_Jersey.geojson"></script>
+      
+  </head>
+  
+  <body>
+      <h1> Waste Contamination in Passaic County, New Jersey
+      </h1>
+      <div id="map"> </div>
+    
     <div id= "buttons">
         <button id= "toggleCon">Toggle the Contaminated Groundwater Site Name Layer. </button>
     
