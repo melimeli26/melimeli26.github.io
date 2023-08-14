@@ -95,8 +95,8 @@
             $.when(response).done(function() {
 
               
-                var contaminationLayer = L.geoJson(response,responseJSON {
-                       style: pointSymbology,
+                var contaminationLayer = L.geoJson(response.responseJSON, 
+		{ style: pointSymbology,
                         onEachFeature: function(feature, layer) { 
                         layer.bindPopup("<b>Contaminated Groundwater Site Name: " + feature.properties.PI_NAME + "</b><br>" +
                                      "CATEGORY: "  + feature.properties.CATEGORY);   
