@@ -59,6 +59,11 @@
 	maxZoom: 22
    	});
 
+	var baseMaps = { "OSM" : OpenStreetMap_HOT,
+		"Stamen" : Thunderforest_Outdoors
+		}
+		L.control.layers(baseMaps).addTo(map);
+	
           function initialize() {
                 var map = L.map('map', {
                   center: [ 41.1232, -74.3587],
