@@ -83,7 +83,7 @@
       L.control.layers(baseMaps).addTo(map);
 	
     	var response = $.ajax({
-            url: "njconsite.geojson.txt",
+            url: "Known_Contaminated_Site_List_for_New_Jersey.geojson",
             dataType: "json",
          	success: console.log("contaminated site data loaded!"),
 		      error: function(xhr) {
