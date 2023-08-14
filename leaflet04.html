@@ -114,7 +114,7 @@
                   }
               });
             
-               L.geoJson(waste_geojson, {
+               L.geoJson(waste_geojson, { 
                         color: "black",
                         weight: 5,
                         opacity: .5,
@@ -122,8 +122,8 @@
                         layer.bindPopup("<b>Facility Name: " + feature.properties.FACILITY_NAME + "</b>");  
                     }
                     }).addTo(map);
-	    }
-          })
+	    });
+          
 	
       </script>
   </head>
