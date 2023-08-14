@@ -82,11 +82,11 @@
     				  }
 
       L.control.layers(baseMaps).addTo(map);
-
+	
     	var response = $.ajax({
-            url: "          enter new data set enterred   ",
+            url: "njconsite.geojson.txt",
             dataType: "json",
-         	success: console.log("rivers data loaded!"),
+         	success: console.log("contaminated site data loaded!"),
 		      error: function(xhr) {
 			          alert(xhr.statusText)
             }
