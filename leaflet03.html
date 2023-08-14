@@ -98,9 +98,9 @@
                         onEachFeature: function (feature, layer) { 
                         layer.bindPopup("<b>Contaminated Groundwater Site Name: " + feature.properties.PI_NAME + "</b>" +
                                      "CATEGORY: "  + 
-                          feature.properities.CATEGORY));   
+                          feature.properities.CATEGORY);   
                     }
-                    });
+                    });addTo(map);
               
 
                L.geoJson(waste_geojson, {
