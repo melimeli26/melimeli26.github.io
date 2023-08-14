@@ -76,7 +76,7 @@
                         weight: 5,
                         opacity: .5,
                         onEachFeature: function (feature, layer) { 
-                        layer.bindPopup("<b>Contaminated Groundwater Site Name:" + feature.properties.PI_NAME + "</b>");   
+                        layer.bindPopup("<b>Contaminated Groundwater Site Name: " + feature.properties.PI_NAME + "</b>");   
                     }
                     }).addTo(map);
               
@@ -86,7 +86,7 @@
                         weight: 5,
                         opacity: .5,
                         onEachFeature: function (feature, layer) { 
-                        layer.bindPopup("<b>Facility Name" + feature.properties.FACILITY_NAME + "</b>");   
+                        layer.bindPopup("<b>Facility Name: " + feature.properties.FACILITY_NAME + "</b>");   
                     }
                     }).addTo(map);
                   }
