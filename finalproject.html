@@ -38,10 +38,8 @@
 
   
   <script>
-	  var contaminationLayer;  
-	  var conVisible = true;
-  
-  var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',{ maxZoom: 25,
+
+var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',{ maxZoom: 25,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>,' + 'Tiles courtesy of <a href="http://www.hot.osm.org">HOT OSM</a>'
                           
         });
@@ -54,48 +52,16 @@
     
           function initialize() {
                 var map = L.map('map', {
-                  center: [ 41.1232, -74.3587],
+                center: [ 40.8568, -74.1285 ],
                   zoom: 15,
                   layers: [OpenStreetMap_HOT]
                 });
 
         var baseMaps = {
-        "OpenStreetMap": OpenStreetMap_HOT,
-        "OpenTopoMap": OpenTopoMap
-    				  }
-
-      L.control.layers(baseMaps).addTo(map);
-	
-    	var response = $.ajax({
-            url: "con.geojson",
-            dataType: "json",
-         	success: console.log("contaminated site data loaded!"),
-		      error: function(xhr) {
-			          alert(xhr.statusText);
-            }
-	          });
-
-            $.when(response).done(function() {
-
-              
-                contaminationLayer = L.geoJson(response.responseJSON, 
-		{ style: pointSymbology,
-                        onEachFeature: function(feature, layer) { 
-                        layer.bindPopup("<b>Contaminated Groundwater Site Name: " + feature.properties.PI_NAME + "</b><br>" +
-                                     "CATEGORY: "  + feature.properties.CATEGORY);   
-                    }
-                    }).addTo(map);
-              
-            $("#toggleCon").show();
-            $("#toggleCon").click(function () {
-                  if (conVisible) {
-                      conVisible = false;
-                      contaminationLayer.removeFrom(map);
-                  } else {
-                      conVisible = true;
-                       contaminationLayer.addTo(map);
-                  }
+        "OpenStreetMap":OpenStreetMap_HOT,
+        "OpenTopoMap": OpenTopoMap,
               });
+
 	  }
       </script>
   </head>
