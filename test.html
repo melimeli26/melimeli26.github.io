@@ -22,10 +22,11 @@ body {
   transition: transform 0.6s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transform: rotateY(180deg); /* Initially flipped */
 }
 
 .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+  transform: rotateY(0deg); /* Flip animation on hover */
 }
 
 .flip-card-front, .flip-card-back {
@@ -38,16 +39,15 @@ body {
 
 /* Reversed styles */
 .flip-card-front {
-  background-color: #2980b9; /* Background color for text */
+  background-color: #2980b9; /* Background color for image */
   color: white; /* Text color */
-  transform: rotateY(180deg); /* Initially flipped */
 }
 
 .flip-card-back {
-  background-color: #bbb; /* Background color for image */
+  background-color: #bbb; /* Background color for text */
   color: black; /* Text color */
+  transform: rotateY(180deg); /* Initially flipped */
 }
-
 </style>
 </head>
 <body>
@@ -58,7 +58,7 @@ body {
       <p2>John Doe</p2> <!-- Text shown by default -->
     </div>
     <div class="flip-card-back">
-      <img src="MRPuebla.jpg" alt="Avatar" style="width:300px;height:300px;"> <!-- Image revealed on hover -->
+      <img src="MRPuebla.jpg" alt="MR" style="width:300px;height:300px;"> <!-- Image revealed on hover -->
     </div>
   </div>
 </div>
