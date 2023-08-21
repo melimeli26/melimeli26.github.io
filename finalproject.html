@@ -194,14 +194,26 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>,' + 'Tiles courtesy of <a href="http://www.hot.osm.org">HOT OSM</a>'
                           
         });
-    
+
+ var CartoDB_Positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', { maxZoom: 25,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	subdomains: 'abcd',
+		});
+
           function initialize() {
                 var map = L.map('map', {
                 center: [ 40.8568, -74.1285 ],
                   zoom: 13,
                   layers: [OpenStreetMap_HOT]
                 });
-	  }
+
+	var baseMaps = { "OSM": OpenStreetMap_HOT,
+                       "Carto Positron": CartoDB_Positron
+                      }
+     
+		  L.control.layers(baseMaps).addTo(map);
+			  }
+	  
 
       </script>
 
