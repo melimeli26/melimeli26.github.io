@@ -79,6 +79,57 @@
               margin-right: auto;
               border-radius: 20px;    
           }
+
+	.flip-card {
+ 		 background-color: transparent;
+ 		 width: 300px;
+  		 height: 300px;
+ 		 perspective: 1000px;
+ 		 margin-right: 20px;
+	}
+
+	.flip-card-inner {
+ 		position: relative;
+		width: 100%;
+		height: 100%;
+		text-align: left;
+		transition: transform 0.6s;
+		transform-style: preserve-3d;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	}
+
+	.flip-card:hover .flip-card-inner {
+		  transform: rotateY(180deg);
+	}
+
+	.flip-card-front, .flip-card-back {
+		position: absolute;
+		width: 100%;
+  		height: 100%;
+  		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 20px;
+		text-align: center;
+	}
+
+	.flip-card-front {
+	  background-color: #A2BD8B;
+ 	 color: black;
+	}
+
+	.flip-card-back {
+		  background-color: #A2BD8B;
+ 		 transform: rotateY(180deg);
+	}
+
+	.flip-card-back img {
+		  max-width: 100%;
+		  max-height: 100%;
+	}
+	
       </style>
 
   
@@ -132,6 +183,17 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
 	</div>
 
 <p> "Hunger and Its Solutions in New Jersey," Robert Wood Johnson Foundation and Food Research and Action Center, 2022. </p>
+
+<div class="flip-card"margin-right: 20px;>
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <p2> Hover to see how many New Jerseyans live in a "food desert."</p2>
+    </div>
+    <div class="flip-card-back">
+      <img src="fd.png" alt="Facts">
+    </div>
+  </div>
+</div>
 	  
      <h3> References </h3>
   </body>
