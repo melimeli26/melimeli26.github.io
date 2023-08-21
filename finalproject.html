@@ -12,7 +12,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
 <style>
-          body {
+          
+	* {box-sizing: border-box}
+
+		.container {
+		 width: 100%;
+ 		 background-color: #ddd;
+	}
+
+		.skills {
+		  text-align: right;
+ 		 padding-top: 10px;
+		  padding-bottom: 10px;
+		  color: white;
+		}
+
+		.lat {width: 18%; background-color: #45584e;}
+		.bl {width: 14%; background-color: #566e62;}
+		.mu {width: 12%; background-color: #4f7562;}
+		.wh {width: 5%; background-color: #6c897a;}
+		.nj {width: 8%; background-color: #5a6457;}
+	
+	body {
             background-color: #305746;
           }
 
@@ -77,6 +98,35 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
       <h3> By Melissa Reyes' 25, Dartmouth College </h3>
 	<p> A food apartheid refers to how...</p>
       <div id="map"> </div>
+	<h3> New Jersey Food Insecurity Compared by Race and Ethncity </h3>
+
+	<p> Latinx </p>
+	<div class="container"> 
+	<div class="skills lat">18%</div>
+	</div>
+	
+	<p> Black </p>
+	<div class="container">
+	<div class="skills bl">14%</div>
+	</div>
+
+	<p> Multiple or Other </p>
+	<div class="container">
+	<div class="skills mu">12%</div>
+	</div>
+
+	<p> White </p>
+	<div class="container">
+	<div class="skills wh">5%</div>
+	</div>
+
+	<p> New Jersey Average </p>
+	<div class="container">
+	<div class="skills nj">5%</div>
+	</div>
+
+<p> "Hunger and Its Solutions in New Jersey," Robert Wood Johnson Foundation and Food Research and Action Center, 2022. </p>
+	  
      <h3> References </h3>
   </body>
 </html>
