@@ -82,7 +82,7 @@
 
 	.flip-card-container {
  		 display: flex;
- 		 justify-content: flex-end;
+ 		 justify-content: space-between;
  		 align-items: center;
 	}
 	
@@ -135,14 +135,7 @@
 		  max-width: 100%;
 		  max-height: 100%;
 	}
-
-  .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 20px;
-  flex-direction: row-reverse;
-}
+	
       </style>
 
   
@@ -172,8 +165,29 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
 
 	<h3> New Jersey Food Insecurity Compared by Race and Ethnicity </h3>
 
-  <div class="container">
-	<div class="flip-card-container">
+
+	   <div class="flip-card-container">
+        <div class="container">
+            <h4>Latinx</h4>
+            <div class="skills lat">18%</div>
+        </div>
+        <div class="container">
+            <h4>Black</h4>
+            <div class="skills bl">14%</div>
+        </div>
+        <div class="container">
+            <h4>Multiple or Other</h4>
+            <div class="skills mu">12%</div>
+        </div>
+        <div class="container">
+            <h4>White</h4>
+            <div class="skills wh">5%</div>
+        </div>
+        <div class="container">
+            <h4>New Jersey Average</h4>
+            <div class="skills nj">8%</div>
+        </div>
+
 	<div class="flip-card">
 	<div class="flip-card-inner">
 	<div class="flip-card-front">
@@ -186,32 +200,8 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
 	</div>
 	</div>
 		
-	<h4> Latinx </h4>
-	<div class="container"> 
-	<div class="skills lat">18%</div>
-	</div>
-	
-	<h4> Black </h4>
-	<div class="container">
-	<div class="skills bl">14% </div>
-	</div>
 
-	<h4> Multiple or Other </h4>
-	<div class="container">
-	<div class="skills mu">12% </div>
-	</div>
-
-	<h4> White </h4>
-	<div class="container">
-	<div class="skills wh">5% </div>
-	</div>
-
-	<h4> New Jersey Average </h4>
-	<div class="container">
-	<div class="skills nj">8% </div>
-	</div>
-  </div>
-		
+	  
 <p> "Hunger and Its Solutions in New Jersey," Robert Wood Johnson Foundation and Food Research and Action Center, 2022. </p>
 
 
