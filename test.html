@@ -34,19 +34,28 @@ body {
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
 }
 
 /* Reversed styles */
 .flip-card-front {
-  background-color: #2980b9; /* Background color for image */
-  color: white; /* Text color */
-  transform: rotateY(0deg); /* Initially not flipped */
+  background-color: #bbb; /* Background color for text */
+  color: black; /* Text color */
 }
 
 .flip-card-back {
-  background-color: #bbb; /* Background color for text */
-  color: black; /* Text color */
+  background-color: #2980b9; /* Background color for image */
+  color: white; /* Text color */
   transform: rotateY(180deg); /* Initially flipped */
+}
+
+.flip-card-back img {
+  max-width: 100%;
+  max-height: 100%;
 }
 </style>
 </head>
@@ -55,10 +64,10 @@ body {
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="MRPuebla.jpg" alt="MR" style="width:300px;height:300px;"> <!-- Image shown by default -->
+      <p2>John Doe</p2> <!-- Text shown by default -->
     </div>
     <div class="flip-card-back">
-      <p2>John Doe</p2> <!-- Text revealed on hover -->
+      <img src="MRPuebla.jpg" alt="Avatar"> <!-- Image revealed on hover -->
     </div>
   </div>
 </div>
