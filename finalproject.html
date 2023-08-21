@@ -197,6 +197,8 @@
   
   <script>
 
+var obc;
+
 var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',{ maxZoom: 25,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, ' + 'Tiles courtesy of <a href="http://www.hot.osm.org">HOT OSM</a>'
                           
@@ -218,9 +220,29 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
                       }
      
 		  L.control.layers(baseMaps).addTo(map);
-			  }
-	  
+			  
+	var response = $.ajax({
+		url: "Overburdened_Communities_under_the_New_Jersey_Environmental_Justice_Law_2021.geojson",
+		dataType: "json",
+		success: console.log("community data loaded!"),
+		error: function(xhr) {
+			alert(xhr.statusText);
+		}
+	});
+	 
+	$.when(response).done(function() {
 
+ var obc = L.geoJson(response.responseJSON,
+	              { 
+	                onEachFeature: function(feature, layer) {
+	                  layer.bindPopup("<b>City Name: " +
+	                  feature.properties.Name + "</b><br>" +
+	                  "Low Income Percentage: " + feature.properties.LOW_INCOME_PCT + "Minority Percentage: " + feature.properties.MINORITY_PCT);
+
+		     }
+	              }).addTo(map); 
+	  }
+}
       </script>
 
 <script>
