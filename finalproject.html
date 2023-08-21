@@ -80,6 +80,12 @@
               border-radius: 20px;    
           }
 
+	.flip-card-container {
+ 		 display: flex;
+ 		 justify-content: flex-end;
+ 		 align-items: center;
+	}
+	
 	.flip-card {
  		 background-color: transparent;
  		 width: 375px;
@@ -182,8 +188,7 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
 	<div class="skills nj">8% </div>
 	</div>
 
-<p> "Hunger and Its Solutions in New Jersey," Robert Wood Johnson Foundation and Food Research and Action Center, 2022. </p>
-
+<div class="flip-card-container">
 <div class="flip-card"margin-right: 20px;>
   <div class="flip-card-inner">
     <div class="flip-card-front">
@@ -194,7 +199,9 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
     </div>
   </div>
 </div>
-	  
+
+<p> "Hunger and Its Solutions in New Jersey," Robert Wood Johnson Foundation and Food Research and Action Center, 2022. </p>
+
      <h3> References </h3>
   </body>
 </html>
