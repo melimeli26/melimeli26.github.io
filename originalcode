@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+      <title> Food Apartheids in Passaic, New Jersey </title>
+      <link rel="stylesheet"href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+                            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+                            crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+                            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
+                            crossorigin=""></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+<style>
+          body {
+            background-color: #305746;
+          }
+
+          h1 {
+            font-family: Optima, sans-serif;
+            background-color: #043927;
+            padding: 10px;  
+            margin: 20px;
+            text-align: center;
+            color: #d3dbd7;
+          }
+
+	 h3 {
+            font-family: Optima, sans-serif;
+            background-color: #537162;
+            padding: 10px;  
+            margin: 20px;
+            text-align: center;
+            color: #d3dbd7;
+          }
+
+	p {
+            background-color: #d3dbd7;
+	    padding: 10px;  
+            margin: 20px;
+            text-align: left;
+	    color: #668575;
+	}
+
+	
+          #map {
+              height: 400px;
+              width: 700px;
+              margin: 20px;
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              border-radius: 20px;    
+          }
+      </style>
+
+  
+  <script>
+
+var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',{ maxZoom: 25,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>,' + 'Tiles courtesy of <a href="http://www.hot.osm.org">HOT OSM</a>'
+                          
+        });
+    
+          function initialize() {
+                var map = L.map('map', {
+                center: [ 40.8568, -74.1285 ],
+                  zoom: 13,
+                  layers: [OpenStreetMap_HOT]
+                });
+	  }
+      </script>
+  </head>
+  
+  <body onload="initialize()">
+      <h1> Food Apartheids in Passaic, New Jersey </h1>
+      <h3> By Melissa Reyes' 25, Dartmouth College </h3>
+	<p> A food apartheid refers to how...</p>
+      <div id="map"> </div>
+     <h3> References </h3>
+  </body>
+</html>
