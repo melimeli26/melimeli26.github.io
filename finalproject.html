@@ -237,7 +237,7 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
 	                onEachFeature: function(feature, layer) {
 	                  layer.bindPopup("<b>City Name: " +
 	                  feature.properties.Name + "</b><br>" +
-	                  "Low Income Percentage: " + feature.properties.LOW_INCOME_PCT + "Minority Percentage: " + feature.properties.MINORITY_PCT);
+	                  "Low Income Percentage: " + feature.properties.LOW_INCOME_PCT);
 
 		     }
 	              }).addTo(map); 
