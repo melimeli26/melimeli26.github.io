@@ -145,7 +145,8 @@
 	}
 	
 	.flip-card {
- 		 background-color: transparent;
+ 		flex: 1; 
+		background-color: transparent;
  		 width: 350px;
   		 height: 350px;
  		 perspective: 1000px;
@@ -194,16 +195,14 @@
 		  max-height: 100%;
 	}
 
-	.video-container {
+	.container2 {
  		display: flex;
-  		align-items: center;
+  		align-items: flex-start;
 		  }
 
  	 .video {
  		flex: 1;
  		padding: 20px;
-		align-self: flex-start;
-		margin-left: 50px;
 	 }
 		 
       </style>
@@ -288,10 +287,10 @@ function myFunction() {
 
 <p> "Hunger and Its Solutions in New Jersey," Robert Wood Johnson Foundation and Food Research and Action Center, 2022. </p>
 
-<div class="video-container">
+<div class="container2">
   <div class="video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/IUeFtaujl7E?si=d4TEaNs-atZzJyRd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  </div> </div>
+  </div> 
 	  
 	<div class="flip-card-container">
 	<div class="flip-card">
@@ -305,6 +304,8 @@ function myFunction() {
  	</div>
 	</div>
 	</div>
+
+</div>
 
      <h3> References </h3>
   </body>
