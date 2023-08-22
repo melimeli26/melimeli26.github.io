@@ -11,6 +11,8 @@
                             crossorigin=""></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
+<script src= "SNAP_Store_Locations.geojson"></script>
+	  
 <style>
 
 		#snackbar {
@@ -259,6 +261,13 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
                 });
                 
         	 $.when(response).done(function() {
+
+	L.geoJson(snap_geojson, {
+		  onEachFeature: function (feature, layer) { 
+                        layer.bindPopup ("<b>Store Name: " + feature.properties.Store_NAME + "</b><br>" +
+                                     "Address: "  + feature.properties.Address); 
+                    }
+                    }).addTo(map);
     
 	var fdLayer = L.geoJson(response.responseJSON,
                         { style: style,
