@@ -210,6 +210,7 @@
 
 	#legend {
   		background-color: white;
+		font: 10px Arial, Helvetica, sans-serif;
  		padding: 10px;
   		border: 1px solid #ccc;
     		border-radius: 5px;
@@ -271,10 +272,10 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
             }
 
 	function getColor(lowAccessScore) {
-   		 return lowAccessScore > 80 ? '#800026' :
-          		lowAccessScore > 60 ? '#BD0026' :
-        		lowAccessScore > 40 ? '#E31A1C' :
-          		lowAccessScore > 20 ? '#FC4E2A' :
+   		 return lowAccessScore > 80 ? '#685724' :
+          		lowAccessScore > 60 ? '#8c762d' :
+        		lowAccessScore > 40 ? '#b29636' :
+          		lowAccessScore > 20 ? '#dab73e' :
         		lowAccessScore > 0 ? '#FD8D3C' :
          		  '#FEB24C';
 		}
