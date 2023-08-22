@@ -237,10 +237,8 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
 	
 
 	 function polygonSymbology(feature) {
-	 var limitedSupermarketArea = feature.properties.LMT_SM_AREA;
-    		    var polygonColor = limitedSupermarketArea === 'yes' ? '#b39414' :
-                          limitedSupermarketArea === 'no' ? '#ffdb62' :
-                          '#ffffff'; 
+	 var limitedSupermarketArea = feature.properties.LOW_ACC_SCR;
+		 	var polygonColor = getColor(lowAccessScore);
 		 
                     return {
                     fillColor: polygonColor,
@@ -252,6 +250,15 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
                 };
 		 
             }
+
+	function getColor(lowAccessScore) {
+   		 return lowAccessScore > 0.8 ? '#800026' :
+          		lowAccessScore > 0.6 ? '#BD0026' :
+        		lowAccessScore > 0.4 ? '#E31A1C' :
+          		lowAccessScore > 0.2 ? '#FC4E2A' :
+        		lowAccessScore > 0 ? '#FD8D3C' :
+         		  '#FEB24C';
+		}
 
 	var response = $.ajax({
                     url: "passaicfd.geojson",
@@ -274,7 +281,7 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
 	var fdLayer = L.geoJson(response.responseJSON,
                         { style: polygonSymbology,
                           onEachFeature: function(feature, layer) {
-                             layer.bindPopup("<b> Food Desert Name: " +
+                             layer.bindPopup("<b> Passaic City Food Desert Section Name: " +
                              feature.properties.BG_NAME + "</b><br>" +
                                  "Population: " + 
                                 feature.properties.POPULATION + "<br>" +
