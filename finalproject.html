@@ -299,7 +299,7 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
                 
         	 $.when(response).done(function() {
 
-	L.geoJson(snap_geojson, {
+var contaminationLayer = L.geoJson(snap_geojson, {
 		  onEachFeature: function (feature, layer) { 
                         layer.bindPopup ("<b>Store Name: " + feature.properties.Store_Name + "</b><br>" +
                                      "Address: "  + feature.properties.Address); 
