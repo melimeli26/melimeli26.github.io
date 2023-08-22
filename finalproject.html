@@ -207,6 +207,25 @@
  		padding: 20px;
 		margin-left: 100px:
 	 }
+
+	#legend {
+  		background-color: white;
+ 		padding: 10px;
+  		border: 1px solid #ccc;
+    		border-radius: 5px;
+    		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+	.legend-item {
+  	  margin-bottom: 5px;
+}
+
+	.legend-color {
+  		display: inline-block;
+    		width: 20px;
+    		height: 20px;
+    		margin-right: 5px;
+}
 		 
       </style>
 
@@ -292,6 +311,28 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
                          }
                           }).addTo(map);
 	  }) 
+
+var legend = L.control({ position: 'bottomright' });
+
+		legend.onAdd = function(map) {
+   			 var div = L.DomUtil.create('div', 'info legend');
+  			 var scores = [0, 20, 40, 60, 80];
+   			 var labels = ['<strong>Low Access Scores</strong>'];
+
+  	  for (var i = 0; i < scores.length; i++) {
+       	 div.innerHTML +=
+            '<div class="legend-item">' +
+            '<div class="legend-color" style="background-color:' + getColor(scores[i]) + '"></div>' +
+            scores[i] + (scores[i + 1] ? '&ndash;' + scores[i + 1] : '+') +
+            '</div>';
+    }
+
+    div.innerHTML = labels.join('') + div.innerHTML;
+    return div;
+};
+
+legend.addTo(map);
+		  
 	}
 	  
       </script>
