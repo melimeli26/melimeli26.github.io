@@ -233,13 +233,11 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
      
 		  L.control.layers(baseMaps).addTo(map);
 	
-	   function getColor(s) {
-                    return s = yes ? '#b39414' :
-                            s = no ? '#ffdb62' :
-                             '#FEB24C' ; 
-	   }
 
-	 function style(feature) {
+	 function polygonSymbology(feature) {
+
+		if (Low Access Score: = yes) {polygonColor= '#b39414';}
+		if (Low Access Score: = no) {polygonColor= '#ffdb62';}
                     return {
                     fillColor: getColor(feature.properties.LMT_SM_AREA),
                     weight: 2,
