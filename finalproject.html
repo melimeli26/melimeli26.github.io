@@ -237,11 +237,13 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
 	
 
 	 function polygonSymbology(feature) {
-
-		if ("LOW_ACC_SCR"== yes) {polygonColor= '#b39414';}
-		if ("LOW_ACC_SCR" == no) {polygonColor= '#ffdb62';}
+	 var limitedSupermarketArea = feature.properties.LMT_SM_AREA;
+    		    var polygonColor = limitedSupermarketArea === 'yes' ? '#b39414' :
+                          limitedSupermarketArea === 'no' ? '#ffdb62' :
+                          '#ffffff'; 
+		 
                     return {
-                    fillColor: getColor(feature.properties.LMT_SM_AREA),
+                    fillColor: polygonColor,
                     weight: 2,
                     opacity: 0.5,
                     color: 'white',
@@ -270,10 +272,10 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
                     }).addTo(map);
     
 	var fdLayer = L.geoJson(response.responseJSON,
-                        { style: style,
+                        { style: polygonSymbology,
                           onEachFeature: function(feature, layer) {
                              layer.bindPopup("<b> Food Desert Name: " +
-                             feature.BG_NAME + "</b><br>" +
+                             feature.properties.BG_NAME + "</b><br>" +
                                  "Population: " + 
                                 feature.properties.POPULATION + "<br>" +
                                 "Low Access Score: " + 
