@@ -233,9 +233,9 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
      
 		  L.control.layers(baseMaps).addTo(map);
 	
-	   function getColor(l) {
-                    return l = 0.8 ? '#b39414' :
-                            l = 0   ? '#ffdb62' :
+	   function getColor(s) {
+                    return s = yes ? '#b39414' :
+                            s = no ? '#ffdb62' :
                              '#FEB24C' ; 
 	   }
 
@@ -265,12 +265,12 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
 	var fdLayer = L.geoJson(response.responseJSON,
                         { style: style,
                           onEachFeature: function(feature, layer) {
-                             layer.bindPopup("<b> Food Desert Name " +
+                             layer.bindPopup("<b> Food Desert Name: " +
                              feature.BG_NAME + "</b><br>" +
                                  "Population: " + 
-                                feature.properties.POPULATION + "%<br>" +
+                                feature.properties.POPULATION + "<br>" +
                                 "Low Access Score: " + 
-                                feature.LOW_ACC_SCR+ "%<br>" +
+                                feature.LOW_ACC_SCR + "<br>" +
                                 "Limited Supermarket Area: " + 
                                 feature.properties.LMT_SM_AREA);
                          }
