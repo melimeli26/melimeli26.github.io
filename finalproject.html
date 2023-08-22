@@ -264,7 +264,7 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
 
 	L.geoJson(snap_geojson, {
 		  onEachFeature: function (feature, layer) { 
-                        layer.bindPopup ("<b>Store Name: " + feature.properties.Store_NAME + "</b><br>" +
+                        layer.bindPopup ("<b>Store Name: " + feature.properties.Store_Name + "</b><br>" +
                                      "Address: "  + feature.properties.Address); 
                     }
                     }).addTo(map);
