@@ -234,17 +234,14 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
 		  L.control.layers(baseMaps).addTo(map);
 	
 	   function getColor(l) {
-                    return l > 0.8 ? '#b39414' :
-                            l > 0.6  ? '#c09f24' :
-                            l > 0.4  ? '#cdab31' :
-                            l > 0.2  ? '#dab73e' :
-                            l > 0   ? '#ffdb62' :
+                    return l = 0.8 ? '#b39414' :
+                            l = 0   ? '#ffdb62' :
                              '#FEB24C' ; 
 	   }
 
 	 function style(feature) {
                     return {
-                    fillColor: getColor(feature.properties.LOW_INCOME_PCT),
+                    fillColor: getColor(feature.properties.LMT_SM_AREA),
                     weight: 2,
                     opacity: 0.5,
                     color: 'white',
@@ -255,9 +252,9 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
             }
 
 	var response = $.ajax({
-                    url: "Overburdened_Communities_under_the_New_Jersey_Environmental_Justice_Law_2021.geojson",
+                    url: "passaicfd.geojson",
                     dataType: "json",
-                    success: console.log("Passaic communities data loaded!"),
+                    success: console.log("Passaic food desert data loaded!"),
                     error: function(xhr) {
                         alert(xhr.statusText);
                     }
@@ -265,17 +262,17 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
                 
         	 $.when(response).done(function() {
     
-	var OverburdenedLayer = L.geoJson(response.responseJSON,
+	var fdLayer = L.geoJson(response.responseJSON,
                         { style: style,
                           onEachFeature: function(feature, layer) {
-                             layer.bindPopup("<b> Muncipal Code: " +
-                             feature.MUN_CODE + "</b><br>" +
-                                 "Low Income Percentile: " + 
-                                Math.round(feature.properties.LOW_INCOME_PCT * 100.0) + "%<br>" +
-                                "Minority Percentile: " + 
-                                Math.round(feature.MINORITY_PCT * 100.0)+ "%<br>" +
-                                "Total Population: " + 
-                                feature.properties.TOTALPOP);
+                             layer.bindPopup("<b> Food Desert Name " +
+                             feature.BG_NAME + "</b><br>" +
+                                 "Population: " + 
+                                feature.properties.POPULATION + "%<br>" +
+                                "Low Access Score: " + 
+                                feature.LOW_ACC_SCR+ "%<br>" +
+                                "Limited Supermarket Area: " + 
+                                feature.properties.LMT_SM_AREA);
                          }
                           }).addTo(map);
 	  }) 
