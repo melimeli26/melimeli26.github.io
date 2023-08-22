@@ -236,8 +236,8 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
 
 	 function polygonSymbology(feature) {
 
-		if ("LOW_ACC_SCR"= yes) {polygonColor= '#b39414';}
-		if ("LOW_ACC_SCR" = no) {polygonColor= '#ffdb62';}
+		if ("LOW_ACC_SCR"== yes) {polygonColor= '#b39414';}
+		if ("LOW_ACC_SCR" == no) {polygonColor= '#ffdb62';}
                     return {
                     fillColor: getColor(feature.properties.LMT_SM_AREA),
                     weight: 2,
