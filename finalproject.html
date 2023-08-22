@@ -274,10 +274,10 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
 	function getColor(lowAccessScore) {
    		 return lowAccessScore > 80 ? '#685724' :
           		lowAccessScore > 60 ? '#8c762d' :
-        		lowAccessScore > 40 ? '#b29636' :
+        		lowAccessScore > 40 ? '#c4a63d' :
           		lowAccessScore > 20 ? '#FDFD96' :
-        		lowAccessScore > 0 ? '#F2EBE2' :
-         		  '#FEB24C';
+        		lowAccessScore > 0 ? '#FDFD96' :
+         		  '#F2EBE2';
 		}
 
 	var response = $.ajax({
