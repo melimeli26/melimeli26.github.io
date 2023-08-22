@@ -275,7 +275,7 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
    		 return lowAccessScore > 80 ? '#685724' :
           		lowAccessScore > 60 ? '#8c762d' :
         		lowAccessScore > 40 ? '#c4a63d' :
-          		lowAccessScore > 20 ? '#FDFD96' :
+          		lowAccessScore > 20 ? '#d0b864' :
         		lowAccessScore > 0 ? '#FDFD96' :
          		  '#F2EBE2';
 		}
@@ -318,7 +318,7 @@ var legend = L.control({ position: 'bottomright' });
 		legend.onAdd = function(map) {
    			 var div = L.DomUtil.create('div', 'info legend');
   			 var scores = [0, 20, 40, 60, 80];
-   			 var labels = ['<strong>Low Access Scores</strong>'];
+   			 var labels = ['Low Access Score'];
 
   	  for (var i = 0; i < scores.length; i++) {
        	 div.innerHTML +=
