@@ -237,7 +237,7 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
 	
 
 	 function polygonSymbology(feature) {
-	 var limitedSupermarketArea = feature.properties.LOW_ACC_SCR;
+	 var lowAccessScore = feature.properties.LOW_ACC_SCR;
 		 	var polygonColor = getColor(lowAccessScore);
 		 
                     return {
@@ -252,10 +252,10 @@ var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{
             }
 
 	function getColor(lowAccessScore) {
-   		 return lowAccessScore > 0.8 ? '#800026' :
-          		lowAccessScore > 0.6 ? '#BD0026' :
-        		lowAccessScore > 0.4 ? '#E31A1C' :
-          		lowAccessScore > 0.2 ? '#FC4E2A' :
+   		 return lowAccessScore > 80 ? '#800026' :
+          		lowAccessScore > 60 ? '#BD0026' :
+        		lowAccessScore > 40 ? '#E31A1C' :
+          		lowAccessScore > 20 ? '#FC4E2A' :
         		lowAccessScore > 0 ? '#FD8D3C' :
          		  '#FEB24C';
 		}
