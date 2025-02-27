@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Your name here">
+    <meta name="description" content="Simple vector tile demonstration">
+    
+        
+    <title>Vector tiles</title> 
+
+    <!-- Style sheet and JavaScript for Leaflet -->
+    <link rel="stylesheet" href="lib/leaflet.css" />
+    <script src="lib/leaflet.js"></script>
+    
+    <!-- leaflet.vectorgrid tools -->
+    <script src="https://unpkg.com/leaflet.vectorgrid@latest/dist/Leaflet.VectorGrid.bundled.js"></script>
+    
+     <!-- Other external code sources -->
+        <script src="basemaps.js"></script>  <!-- Basemaps -->
+        <script src="100_Mile_Border_Zone.GJ.js"></script> <!-- 100 mile border zone -->
+        <script src="ero_GJ.js"></script> <!-- Ero Field Offices -->
+        <script src="patrol_GJ.js"></script> <!-- Border Patrol Stations -->
+    
+    <!-- CSS for the overall page layout.  -->
+    <style type="text/css">
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+        #map {
+            width: 100%;
+            height:90%;
+            float:left;
+        }
+        #footer {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+         
+</head>
+
+<body>
+    
+    <!-- Page layout: maps on top, text below -->
+    <div id="map"></div>
+    <div id="footer">
+        <h2>VectorGrid tile layer demonstration</h2>  
+    </div>
+    
+    <script> 
+        
+        // Set map bounds for US Lower 48
+        var southWest = L.latLng(23,-133);
+        var northEast = L.latLng(51,-60);
+        var bounds = L.latLngBounds(southWest, northEast);
+
+        // Initialize the map
+        var map = L.map('map', {
+            center: [38, -95],
+            zoom: 4,
+            maxZoom: 7,
+            maxBounds: bounds,
+            layers: [Esri_WorldImagery]
+        });     
+        
+        // URL for the vector tile layer
+        var tileUrl =  "https://rcweb.dartmouth.edu/Geospace/geog54/Tile_Layers/counties/{z}/{x}/{y}.pbf";  
+        
+        // Define styles for the vector tile layer
+        var tileStyle = {
+            vectorTileLayerStyles: {
+                // "polys" = layer name from the GeoJSON used to make vector tiles
+                polys: function(properties) {
+                    // To symbolize this layer using attribute data (properties):
+                    //   Method 1: Use props.FIPS to get the county FIPS code
+                    //     Then look up that FIPS code in a table you've made,
+                    //     extract whatever data values you want to map, and use
+                    //     those to set the symbology.
+                    //   Method 2: Symbolize using other properties already included
+                    //     in the tile layer. To see available property names, run
+                    //     the code, click on a county, open the console log, and 
+                    //     look for the properties object in the log. Click to expand
+                    //     the object to show all property names.
+                    return {
+                        fill: true,
+                        fillColor: "#aacc99",
+                        fillOpacity: 1,
+                        color: "#557722",
+                        weight: 1,
+                        opacity: 1
+                    };
+                }
+            },
+            interactive: true,	// Make sure that this VectorGrid fires mouse/pointer events
+            getFeatureId: function(f) { 
+                return f.properties.OBJECTID;   // This is a way to get unique IDs for polygons
+            }
+        };
+
+        // Format the content of the popup window
+        function makePopup(props) {
+            var pFips = props.FIPS;
+            var pPop = props.Tot_Population_CEN_2010;
+            var pLand = props.LAND_AREA;
+            var pDens = pPop/pLand;
+            popText = "<b>FIPS:</b> " + pFips + "<br>";
+            popText += "<b>Pop 2010:</b> " + pPop + "<br>";
+            popText += "<b>Land area:</b> " + pLand + " sq mi<br>";
+            popText += "<b>Density:</b> " + pDens.toFixed(2) + "/sq mi";
+            return popText;
+        };
+        
+        // Make a layer from the URL and the style options
+
+        var borderzone = L.geoJson(borderzone_GJ, {
+                style: function (feature) {
+                    return {
+                        color: "red", // Color of the borderzone
+                        weight: 0.5, // Thickness of the border
+                        opacity: 0.5, // Opacity of the border
+                        fillColor: "pink", // Fill color (if applicable)
+                        fillOpacity: 0.6 // Opacity of the fill (if applicable)
+                    };
+                }
+            }).addTo(map);
+        
+        var Counties = L.vectorGrid.protobuf(tileUrl, tileStyle).addTo(map);
+
+        var ERO = L.geoJson(ero_GJ, {
+                pointToLayer: function (feature, latlng) {
+                return L.marker(latlng)
+                }
+            }).addTo(map);
+
+        var patrol = L.geoJson(patrol_GJ, {
+                pointToLayer: function (feature, latlng) {
+                    return L.circleMarker(latlng, {
+                        color: "black", // Set the color of the circle border
+                        radius: 8, // Set the radius of the circle
+                        fillColor: "yellow", // Fill color of the circle
+                        fillOpacity: 0.95, // Opacity of the fill color
+                        weight: 2, // Thickness of the circle's border
+                        opacity: 1 // Opacity of the circle's border
+                    });
+                }
+            }).addTo(map);
+        
+        
+        // Event handler for clicks on the polygons layer, used for popups
+        Counties.on('click', function(e) {	// The .on method attaches an event handler
+            var props = e.layer.properties;
+            var oid = props.OBJECTID;
+            
+        // Write out this feature's properties to the console log, for testing purposes
+        console.log(props);
+            
+        // Set up the popup window
+        L.popup()
+                .setContent(makePopup(props))
+                .setLatLng(e.latlng)
+                .openOn(map);
+
+        // Stop click propagation to other layers
+            L.DomEvent.stop(e);
+                
+        });     // End of Counties.on('click', function(e) 
+
+
+        // Only one optional overlay for this map
+        var overLays = {
+            "Vector tile layer": Counties,
+            "100 Mile Border Zone": borderzone
+        };
+               
+        // Add the Layer Control to the map
+        L.control.layers(baseMaps, overLays, {collapsed: false}).addTo(map);
+        
+    </script>
+
+
+</body>
+</html>
