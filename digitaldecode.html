@@ -1,78 +1,73 @@
+
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="author" content="Group Project Item" />
-        <meta name="description" content="A Leaflet map of 100 Mile Border Zone" />
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Jane A. Student">
+    <meta name="description" content="A Leaflet map of Chicago public murals">
+        
+    <title>Mental Health Resources in NJ </title>  
+     
+    <!-- Style sheet for Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    
+    <!-- JavaScript source for Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+           
+    <!-- Leaflet legend plugin (code stored locally)-->
+    <!-- From here: https://github.com/ptma/Leaflet.Legend -->
+    <link rel="stylesheet" href="utilities/leaflet.legend.css" />
+    <script type="text/javascript" src="utilities/leaflet.legend.js"></script>
+    
+    <!-- Other external code sources -->   
+    <script src="basemaps.js"></script>     <!-- Basemaps -->
+    
+    <!-- Define styles for the document and the map -->
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+        #map {
+            width: 100%;
+            height: 80%;
+        }
+        #text_area {
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+	</style> 
 
-        <!-- Summarize your changes to the original code in comments here -->
-        <!-- Date: Description of edits -->
+</head>
 
-        <title> Digital Decode</title>
+<body>  
+ 
+    <div id="map"></div>   
+    <div id="text_area">
+        <h3> MENTAL HEALTH RESOURCES
+            BY DIGITAL DECODE  </h3>
+    </div> 
 
-        <!-- Style sheet for Leaflet -->
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-            crossorigin="" />
+    <script> 
 
-        <!-- Add comment here-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-        <!-- JavaScript source for Leaflet -->
-        <script
-            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-            crossorigin=""></script>
+        // Initialize the map
+        var map = L.map('map', {
+            center: [40.0583, 74.4057],
+            zoom: 10,
+            layers: [CartoDB_Positron]  // Be sure this is in basemaps.js
+        });
+        
+        // Add a scale control to the lower right corner of the map
+        L.control.scale({position:'bottomright'}).addTo(map);
+        
+        // Define the overLays object, for use in the layer control
+        var overLays = {
+        };        
+        
+        // Add the Layer Control to the map (baseMaps defined in separate file)
+        L.control.layers(baseMaps, overLays, {collapsed: false}).addTo(map);
 
-        <!-- Style sheet and JavaScript for Leaflet -->
-        <link rel="stylesheet" href="lib/leaflet.css" />
-        <script src="lib/leaflet.js"></script>
+    </script>
 
-        <!-- leaflet.vectorgrid tools -->
-        <script src="https://unpkg.com/leaflet.vectorgrid@latest/dist/Leaflet.VectorGrid.bundled.js"></script>
-
-
-         <!-- Define styles for the document and the map -->
-        <style>
-            html,
-            body {
-                height: 100%;
-                margin: 0;
-            }
-            #map {
-                width: 100%;
-                height: 80%;
-            }
-            #text_area {
-                padding: 5px;
-                font-family: Arial, Helvetica, sans-serif;
-            }
-        </style>
-    </head>
-
-    <body>
-        <div id="map"></div>
-        <div id="text_area">
-            <h3> DIGITAL DECODE </h3>
-            NJ RESOURCES
-        </div>
-
-        <script>
-            // Set map bounds for US Lower 48
-            var southWest = L.latLng(23, -133);
-            var northEast = L.latLng(51, -60);
-            var bounds = L.latLngBounds(southWest, northEast);
-
-            // Initialize the map
-            var map = L.map("map", {
-                center: [38, -95],
-                zoom: 4,
-                maxZoom: 7,
-                maxBounds: bounds,
-                layers: [Esri_WorldImagery]
-            });
-
-            // Add a scale control to the lower right corner of the map
-            L.control.scale({ position: "bottomright" }).addTo(map);
-
+</body>
 </html>
