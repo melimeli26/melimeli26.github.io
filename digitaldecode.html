@@ -31,4 +31,48 @@
         <!-- leaflet.vectorgrid tools -->
         <script src="https://unpkg.com/leaflet.vectorgrid@latest/dist/Leaflet.VectorGrid.bundled.js"></script>
 
+
+         <!-- Define styles for the document and the map -->
+        <style>
+            html,
+            body {
+                height: 100%;
+                margin: 0;
+            }
+            #map {
+                width: 100%;
+                height: 80%;
+            }
+            #text_area {
+                padding: 5px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="map"></div>
+        <div id="text_area">
+            <h3>100 Mile</h3>
+            By Giselle Curiel, Sebastian Coste Reyes, Melissa Reyes
+        </div>
+
+        <script>
+            // Set map bounds for US Lower 48
+            var southWest = L.latLng(23, -133);
+            var northEast = L.latLng(51, -60);
+            var bounds = L.latLngBounds(southWest, northEast);
+
+            // Initialize the map
+            var map = L.map("map", {
+                center: [38, -95],
+                zoom: 4,
+                maxZoom: 7,
+                maxBounds: bounds,
+                layers: [Esri_WorldImagery]
+            });
+
+            // Add a scale control to the lower right corner of the map
+            L.control.scale({ position: "bottomright" }).addTo(map);
+
 </html>
