@@ -1,0 +1,600 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.75004292,-74.1976632 ]
+    },
+    "properties": {
+    "Community Resource Name":"YouthBuild Newark",
+    "Category":"Youth Programs",
+    "Audience":"Youth 13-18, Youth 18-24",
+    "Location":"571 Central Ave, Newark, NJ 07107",
+    "City":"Newark",
+    "County":"Essex",
+    "Website":"https://www.youthbuildnewarknj.org",
+    "Phone Number":"(973) 624-4720"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.73780555,-74.17047908 ]
+    },
+    "properties": {
+    "Community Resource Name":"Planned Parenthood of Metropolitan New Jersey (Newark)",
+    "Category":"Healthcare, LGBTQ+, Family Resources",
+    "Audience":"Youth 13-18, Youth 18-24, Adults 24+",
+    "Location":"240 Mulberry St Floor 1, Newark, NJ 07102",
+    "City":"Newark",
+    "County":"Essex",
+    "Website":"https://www.plannedparenthood.org/health-center/new-jersey/newark/07102/mulberry-health-center-4225-90920",
+    "Phone Number":"(973) 622-3900"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.7586338,-74.16538397 ]
+    },
+    "properties": {
+    "Community Resource Name":"Sadie Nash Leadership Project",
+    "Category":"Youth Programs, LGBTQ+, Mental health",
+    "Audience":"Youth 13-18, Youth 18-24",
+    "Location":"24 Commerce St, Newark, NJ 07102",
+    "City":"Newark",
+    "County":"Essex",
+    "Website":"https://www.sadienash.org",
+    "Phone Number":"(973) 642-0007"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.74301979,-74.16915143 ]
+    },
+    "properties": {
+    "Community Resource Name":"YM/WCA Newark & Vicinity",
+    "Category":"Family Resources, Youth Programs",
+    "Audience":"Youth 13-18, Youth 18-24, Adults 24+",
+    "Location":"600 Broad St, Newark, NJ 07102",
+    "City":"Newark",
+    "County":"Essex",
+    "Website":"https://www.newarkymca.org",
+    "Phone Number":"(973) 624-8900"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.74535714,-74.16983809 ]
+    },
+    "properties": {
+    "Community Resource Name":"Newark Public Library - Main Branch",
+    "Category":"Family Resources, Youth Programs, LGBTQ+",
+    "Audience":"Youth 13-18, Youth 18-24, Adults 24+",
+    "Location":"5 Washington St, Newark, NJ 07102",
+    "City":"Newark",
+    "County":"Essex",
+    "Website":"https://www.npl.org",
+    "Phone Number":"(973) 733-7779"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.74290082,-74.16878708 ]
+    },
+    "properties": {
+    "Community Resource Name":"Big Brothers Big Sisters of Essex, Hudson & Union Counties",
+    "Category":"Youth Programs",
+    "Audience":"Youth 13-18",
+    "Location":"550 Broad St Suite 604, Newark, NJ 07102",
+    "City":"Newark",
+    "County":"Essex",
+    "Website":"https://bigsandkids.org",
+    "Phone Number":"(973) 642-2447"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.74185049,-74.17454507 ]
+    },
+    "properties": {
+    "Community Resource Name":"4‑H Clubs & Programs for Youth",
+    "Category":"Youth Programs, Mental health",
+    "Audience":"Youth 13-18",
+    "Location":"195 University Ave, Newark, NJ 07102",
+    "City":"Newark",
+    "County":"Essex",
+    "Website":"https://essex.njaes.rutgers.edu/4h/youth/clubs/",
+    "Phone Number":"Not available"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.73713532,-74.17533365 ]
+    },
+    "properties": {
+    "Community Resource Name":"NEWARK LGBTQ COMMUNITY CENTER",
+    "Category":"LGBTQ+, Youth Programs, Family Resources, Mental health",
+    "Audience":"Youth 18-24, Adults 24+",
+    "Location":"89 Market St, Newark, NJ 07102",
+    "City":"Newark",
+    "County":"Essex",
+    "Website":"https://www.newarklgbtqcenter.org",
+    "Phone Number":"(973) 474-4677"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.75649968,-74.17631669 ]
+    },
+    "properties": {
+    "Community Resource Name":"La Casa de Don Pedro",
+    "Category":"Mental health, Youth Programs, Family Resources",
+    "Audience":"Youth 13-18, Youth 18-24, Adults 24+",
+    "Location":"75 Park Ave, Newark, NJ 07104",
+    "City":"Newark",
+    "County":"Essex",
+    "Website":"https://lacasadedonpedro.org",
+    "Phone Number":"(973) 482-8312"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.780535,-74.18401803 ]
+    },
+    "properties": {
+    "Community Resource Name":"Catholic Charities of the Archdiocese of Newark",
+    "Category":"Youth Programs, Family Resources, Mental health",
+    "Audience":"Youth 13-18, Youth 18-24, Adults 24+",
+    "Location":"590 N 7th St, Newark, NJ 07107",
+    "City":"Newark",
+    "County":"Essex",
+    "Website":"https://ccannj.org",
+    "Phone Number":"(800) 227-7413"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.91428998,-74.17611617 ]
+    },
+    "properties": {
+    "Community Resource Name":"Oasis — A Haven for Women and Children\n",
+    "Category":"Youth Programs, Family Resources, Mental health, Healthcare",
+    "Audience":"Youth 13-18, Youth 18-24, Adults 24+",
+    "Location":"59 Mill St, Paterson, NJ 07501",
+    "City":"Paterson",
+    "County":"Passaic",
+    "Website":"https://oasisnj.org",
+    "Phone Number":"(973) 881-8307"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.91582071,-74.17000652 ]
+    },
+    "properties": {
+    "Community Resource Name":"Paterson Healing Collective",
+    "Category":"Youth Programs, Mental health",
+    "Audience":"Youth 13-18, Youth 18-24",
+    "Location":"100 Hamilton Plaza, Suite #415 - Paterson NJ, 07505",
+    "City":"Paterson",
+    "County":"Passaic",
+    "Website":"https://patersonhealingcollective.org",
+    "Phone Number":"(856) 535-3681"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.92864,-74.18582 ]
+    },
+    "properties": {
+    "Community Resource Name":"JFK Teen Center",
+    "Category":"Youth Programs",
+    "Audience":"Youth 13-18",
+    "Location":"61-127 Preakness Avenue, Paterson, NJ 07522",
+    "City":"Paterson",
+    "County":"Passaic",
+    "Website":"https://www.patersonnj.gov/department/division.php",
+    "Phone Number":"(973) 321-0541"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.91759102,-74.14429663 ]
+    },
+    "properties": {
+    "Community Resource Name":"Planned Parenthood of Metropolitan New Jersey (Paterson)",
+    "Category":"Family Resources, Healthcare",
+    "Audience":"Youth 13-18, Youth 18-24, Adults 24+",
+    "Location":"680 Broadway, Paterson, NJ 07514",
+    "City":"Paterson",
+    "County":"Passaic",
+    "Website":"https://www.plannedparenthood.org/health-center/new-jersey/paterson/07514/centro-de-salud-paterson-2557-90920",
+    "Phone Number":"(973) 345-3883"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.92273018,-74.16753327 ]
+    },
+    "properties": {
+    "Community Resource Name":"SOLID Foundation Youth Outreach",
+    "Category":"Youth Programs, Family Resources",
+    "Audience":"Youth 13-18",
+    "Location":"39 Governor St, Paterson, NJ 07501",
+    "City":"Paterson",
+    "County":"Passaic",
+    "Website":"https://www.skatecreateconnect.org",
+    "Phone Number":"(973) 306-4687"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.93030621,-74.16393015 ]
+    },
+    "properties": {
+    "Community Resource Name":"Paterson Free Public Library",
+    "Category":"Youth Programs, Family Resources, Mental health",
+    "Audience":"Youth 13-18, Youth 18-24, Adults 24+",
+    "Location":"250 Broadway, Paterson, NJ 07501",
+    "City":"Paterson",
+    "County":"Passaic",
+    "Website":"https://patersonpl.org",
+    "Phone Number":"(973) 321-1223"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.91643,-74.17198 ]
+    },
+    "properties": {
+    "Community Resource Name":"New Jersey Community Development Corporation",
+    "Category":"Youth Programs, Family Resources",
+    "Audience":"Youth 18-24, Adults 24+",
+    "Location":"32 Spruce St. Paterson NJ 07501",
+    "City":"Paterson",
+    "County":"Passaic",
+    "Website":"https://www.njcdc.org",
+    "Phone Number":"(973) 413-1600"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.91545,-74.17016 ]
+    },
+    "properties": {
+    "Community Resource Name":"Paterson Task Force for Community Action, Inc. (PTF)",
+    "Category":"Family Resources",
+    "Audience":"Youth 18-24, Adults 24+",
+    "Location":"109 Washington Street\nPaterson, NJ 07505",
+    "City":"Paterson",
+    "County":"Passaic",
+    "Website":"https://www.patersontaskforce.com/housing-services.php",
+    "Phone Number":"(973) 279-2333"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.91370214,-74.18428271 ]
+    },
+    "properties": {
+    "Community Resource Name":"Great Falls Paterson Youth Center",
+    "Category":"Youth Programs, Mental health",
+    "Audience":"Youth 13-18, Youth 18-24",
+    "Location":"52 Front St, Paterson, NJ",
+    "City":"Paterson",
+    "County":"Passaic",
+    "Website":"Not available",
+    "Phone Number":"(973) 413-1671"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.86674861,-74.19763257 ]
+    },
+    "properties": {
+    "Community Resource Name":"Paterson Coalition for Prevention and Empowerment",
+    "Category":"Youth Programs, Family Resources, Mental health",
+    "Audience":"Youth 18-24, Adults 24+",
+    "Location":"1 Normal Ave, Montclair, NJ 07043",
+    "City":"Montclair",
+    "County":"Passaic",
+    "Website":"https://msucope.org/the-paterson-coalition-for-prevention-and-empowerment-p-cope-and-the-sober-truth-on-preventing-underage-drinking-stop-act-initiatives/",
+    "Phone Number":"(973) 655-6785"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.78132101,-74.02533123 ]
+    },
+    "properties": {
+    "Community Resource Name":"North Hudson WIC Program",
+    "Category":"Healthcare, Family Resources",
+    "Audience":"Youth 18-24, Adults 24+",
+    "Location":"407 39th St # 403, Union City, NJ 07087",
+    "City":"Union City",
+    "County":"Hudson",
+    "Website":"https://www.wicprograms.org/li/north_hudson_wic_program",
+    "Phone Number":"(201) 866-4700"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.7145619,-74.04400612 ]
+    },
+    "properties": {
+    "Community Resource Name":"Boys & Girls Clubs of Hudson County",
+    "Category":"Youth Programs, Family Resources",
+    "Audience":"Youth 13-18, Youth 18-24",
+    "Location":"225 Morris Boulevard, Jersey City, NJ 07302",
+    "City":"Jersey City",
+    "County":"Hudson",
+    "Website":"https://www.bgchc.org",
+    "Phone Number":"(201) 333-4100"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.73957277,-74.03792508 ]
+    },
+    "properties": {
+    "Community Resource Name":"Boys & Girls Clubs of Hudson County",
+    "Category":"Youth Programs, Family Resources",
+    "Audience":"Youth 13-18, Youth 18-24",
+    "Location":"123 Jefferson Street, Hoboken, NJ 07030",
+    "City":"Hoboken",
+    "County":"Hudson",
+    "Website":"https://www.bgchc.org",
+    "Phone Number":"(201) 963-6443"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.76848862,-74.0425153 ]
+    },
+    "properties": {
+    "Community Resource Name":"North Bergen Public Library",
+    "Category":"Youth Programs, Family Resources",
+    "Audience":"Youth 13-18, Youth 18-24, Adults 24+",
+    "Location":"8411 Bergenline Ave, North Bergen, NJ 07047",
+    "City":"North Bergen",
+    "County":"Hudson",
+    "Website":"https://nbpl.org",
+    "Phone Number":"(201) 869-4715"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.76620213,-74.03863134 ]
+    },
+    "properties": {
+    "Community Resource Name":"Union City Public Library",
+    "Category":"Youth Programs, Family Resources",
+    "Audience":"Youth 13-18, Youth 18-24, Adults 24+",
+    "Location":"1800 Summit Ave, Union City, NJ 07087",
+    "City":"Union City",
+    "County":"Hudson",
+    "Website":"https://uclibrary.org",
+    "Phone Number":"(201) 866-7503"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.7234507,-74.06866104 ]
+    },
+    "properties": {
+    "Community Resource Name":"New City Kids",
+    "Category":"Youth Programs, Mental health",
+    "Audience":"Youth 13-18",
+    "Location":"240 Fairmount Ave, Jersey City, NJ 07306",
+    "City":"Jersey City",
+    "County":"Hudson",
+    "Website":"https://newcitykids.org",
+    "Phone Number":"(201) 915-9896"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.72434274,-74.06885978 ]
+    },
+    "properties": {
+    "Community Resource Name":"Women Rising",
+    "Category":"LGBTQ+, Family Resources, Mental health",
+    "Audience":"Youth 13-18, Youth 18-24, Adults 24+",
+    "Location":"270 Fairmount Ave, Jersey City, NJ 07306",
+    "City":"Jersey City",
+    "County":"Hudson",
+    "Website":"https://www.womenrising.org",
+    "Phone Number":"(201) 333-5700"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.72262489,-74.06967636 ]
+    },
+    "properties": {
+    "Community Resource Name":"Jersey City Anti-Violence Coalition Movement",
+    "Category":"Family Resources, Mental health",
+    "Audience":"Youth 13-18, Youth 18-24, Adults 24+",
+    "Location":"221 Monticello Ave, Jersey City, NJ 07304",
+    "City":"Jersey City",
+    "County":"Hudson",
+    "Website":"https://antiviolencecoalition.org",
+    "Phone Number":"(201) 589-8322"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.73968188,-74.03547373 ]
+    },
+    "properties": {
+    "Community Resource Name":"Hudson SPEAKS",
+    "Category":"LGBTQ+, Family Resources, Mental health",
+    "Audience":"Youth 13-18, Youth 18-24, Adults 24+",
+    "Location":"122 Clinton St, Hoboken, NJ 07030",
+    "City":"Hoboken",
+    "County":"Hudson",
+    "Website":"Not available",
+    "Phone Number":"(201) 795-8375"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.73572156,-74.06290426 ]
+    },
+    "properties": {
+    "Community Resource Name":"Hudson Pride",
+    "Category":"LGBTQ+, Youth Programs, Family Resources, Mental health, Healthcare",
+    "Audience":"Youth 13-18, Youth 18-24, Adults 24+",
+    "Location":"3000 John F. Kennedy Blvd # 306, Jersey City, NJ 07306",
+    "City":"Jersey City",
+    "County":"Hudson",
+    "Website":"https://hudsonpride.org",
+    "Phone Number":"(201) 963-4779"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.7173168,-74.04382671 ]
+    },
+    "properties": {
+    "Community Resource Name":"New Jersey Consortium for Immigrant Children",
+    "Category":"Mental health, Youth Programs, Family Resources",
+    "Audience":"Youth 13-18, Youth 18-24, Adults 24+",
+    "Location":"201 Montgomery St., Jersey City, NJ 07302",
+    "City":"Jersey City",
+    "County":"Hudson",
+    "Website":"https://www.njcic.org",
+    "Phone Number":"(201) 305-9217"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.78811665,-74.01512446 ]
+    },
+    "properties": {
+    "Community Resource Name":"North Hudson Community Action Corporation",
+    "Category":"Healthcare, Family Resources, Mental health",
+    "Audience":"Youth 18-24, Adults 24+",
+    "Location":"5301 Broadway, West New York, NJ 07093",
+    "City":"West New York",
+    "County":"Hudson",
+    "Website":"https://nhcac.org",
+    "Phone Number":"(201) 210-0200"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.66375586,-74.21528235 ]
+    },
+    "properties": {
+    "Community Resource Name":"Make the Road New Jersey",
+    "Category":"Youth Programs, Family Resources",
+    "Audience":"Youth 13-18, Youth 18-24, Adults 24+",
+    "Location":"42 Broad St, Elizabeth, NJ 07201",
+    "City":"Elizabeth",
+    "County":"Hudson",
+    "Website":"https://maketheroadnj.org",
+    "Phone Number":"(908) 368-1196"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.72180873,-74.04659061 ]
+    },
+    "properties": {
+    "Community Resource Name":"Jersey City Public Library",
+    "Category":"Youth Programs, Family Resources",
+    "Audience":"Youth 13-18, Youth 18-24, Adults 24+",
+    "Location":"472 Jersey Ave, Jersey City, NJ 07302",
+    "City":"Jersey City",
+    "County":"Hudson",
+    "Website":"https://jclibrary.org",
+    "Phone Number":"(201) 547-4526"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 40.75266497,-74.02602875 ]
+    },
+    "properties": {
+    "Community Resource Name":"Hoboken-North Hudson YMCA",
+    "Category":"Youth Programs, Family Resources",
+    "Audience":"Youth 13-18, Youth 18-24, Adults 24+",
+    "Location":"1301 Washington St, Hoboken, NJ 07030",
+    "City":"Hoboken",
+    "County":"Hudson",
+    "Website":"https://hobokencc.org",
+    "Phone Number":"(201) 963-4100"
+    }
+  }
+]
+}
