@@ -1,3 +1,5 @@
+var resourcemap_GJ =
+
 {
    "type": "FeatureCollection",
    "features": [
