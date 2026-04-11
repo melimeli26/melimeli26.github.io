@@ -1,3 +1,5 @@
+var Communitymap_GJ =
+   
 {
    "type": "FeatureCollection",
    "features": [
