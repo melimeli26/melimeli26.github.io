@@ -78,8 +78,8 @@
  	 );
 }
 
-		Communitymap_GJ.features.forEach(f => {
-  		const coords = f.geometry.coordinates;
+		resourcemap_GJ.features.forEach(f => {
+ 		 const coords = f.geometry.coordinates;
  		 f.geometry.coordinates = [coords[1], coords[0]];
 		});
 
