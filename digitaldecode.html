@@ -81,18 +81,19 @@
 
     // Import geoJSON data for mural locations
     // Change the display of the popup
-        var community_all=L.geoJson(Communitymap_GJ, {
-            pointToLayer: function (feature, latlng) {
-                return L.circleMarker(latlng, {
-                radius: 8,
-                fillColor: "Pink",
-                fillOpacity: 1.5,    
-                color: "PaleVioletRed",
-                weight: 1.5,    
-                opacity: 1.5    
-                });
-            }, onEachFeature: infoPopup   
-        }).addTo(map);
+	  var community_all = L.geoJson(Communitymap_GJ, {
+	  pointToLayer: function (feature, latlng) {
+    	return L.circleMarker(latlng, {
+  	    	radius: 8,
+    	  fillColor: "#FFC0CB",
+     	 fillOpacity: 0.8,
+    	  color: "#DB7093",
+    	  weight: 1.5,
+    	  opacity: 1
+    	});
+ 	 },
+ 	 onEachFeature: infoPopup
+	}).addTo(map);
 		
         // Define the overLays object, for use in the layer control
         var overLays = {
