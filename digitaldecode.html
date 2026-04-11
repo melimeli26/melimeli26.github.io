@@ -78,6 +78,10 @@
  	 );
 }
 
+		Communitymap_GJ.features.forEach(f => {
+  		const coords = f.geometry.coordinates;
+ 		 f.geometry.coordinates = [coords[1], coords[0]];
+		});
 
     // Import geoJSON data for mural locations
     // Change the display of the popup
