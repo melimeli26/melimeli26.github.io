@@ -60,10 +60,24 @@
             zoom: 10,
             layers: [CartoDB_Positron]
         });
-        
+		
         // Add a scale control to the lower right corner of the map
         L.control.scale({position:'bottomright'}).addTo(map);
+
+  		// Create popups for mural points. Edit to include attributes in the popup.
         
+   		 function infoPopup(feature, layer) {
+		  layer.bindPopup(
+   		 "<b>Community Resource Name</b>: " + feature.properties["Community Resource Name"] +
+   		 "<br><b>Category</b>: " + feature.properties["Category"] +
+   		 "<br><b>Location</b>: " + feature.properties["Location"] +
+  			"<br><b>City</b>: " + feature.properties["City"] +
+ 			"<br><b>County</b>: " + feature.properties["County"] +
+  		  "<br><b>Website</b>: <a href='" + feature.properties["Website"] + "' target='_blank'>Link</a>" +
+   			 "<br><b>Phone Number</b>: " + feature.properties["Phone Number"]
+ 	 );
+}
+
         // Define the overLays object, for use in the layer control
         var overLays = {
         };        
