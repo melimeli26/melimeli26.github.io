@@ -81,7 +81,7 @@
 
     // Import geoJSON data for mural locations
     // Change the display of the popup
-	  var community_all = L.geoJson(resourcemap_GJ =, {
+	  var resourcemap = L.geoJson(resourcemap_GJ =, {
 	  pointToLayer: function (feature, latlng) {
     	return L.circleMarker(latlng, {
   	    	radius: 8,
