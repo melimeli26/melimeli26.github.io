@@ -23,7 +23,7 @@
     <script src="basemaps.js"></script>     <!-- Basemaps -->
 
 	 <!-- Added link to Community Data geojson-->
-    <script src="Communitymap_GJ.js"></script> 
+    <script src="resourcemap_GJ.js"></script> 
     
     <!-- Define styles for the document and the map -->
 	<style>
@@ -81,7 +81,7 @@
 
     // Import geoJSON data for mural locations
     // Change the display of the popup
-	  var community_all = L.geoJson(Communitymap_GJ, {
+	  var community_all = L.geoJson(resourcemap_GJ =, {
 	  pointToLayer: function (feature, latlng) {
     	return L.circleMarker(latlng, {
   	    	radius: 8,
